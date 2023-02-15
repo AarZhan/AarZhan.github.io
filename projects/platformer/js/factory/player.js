@@ -122,17 +122,17 @@
         
         function createFlyingJumpState(name) {
             let 
-                xOffset = 17,
-                yOffset = 9,
+                xOffset = 10,
+                yOffset = 20,
                 state = createState(name);
                 state.fire = state.duck = state.idle = state.walk = state.run = 
                 state.stop = state.duck = state.jump = state.flyingJump = doNothing;
             state.enter = function() {
                 console.log(`entering ${ name }`);
                 asset.body.bounce.y = 0;
-                game.add.tween(asset.body).to( { y: asset.body.y -100 }, 1000, Phaser.Easing.Linear.None, true);
+                game.add.tween(asset.body).to( { y: asset.body.y -150 }, 1000, Phaser.Easing.Linear.None, true);
 
-                asset.body.velocity.x = 200 * _direction;
+                asset.body.velocity.x = 120 * _direction;
                 asset.x += xOffset * _direction;
                 asset.y += yOffset;
             };
