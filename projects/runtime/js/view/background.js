@@ -50,6 +50,13 @@ var background = function (window) {
             var ground = draw.rect(canvasWidth, 330, "lightblue");
             background.addChild(ground);
 
+            var moon = draw.bitmap("img/sun.png");
+moon.x = 900;
+moon.y = -100;
+moon.scaleX = .2;
+moon.scaleY = .2;
+background.addChild(moon);
+            
         
             
             // TODO 4: Part 1 - Add buildings!     Q: This is before TODO 4 for a reason! Why?
